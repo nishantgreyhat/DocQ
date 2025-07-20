@@ -42,10 +42,32 @@ DocQ is a React-based web application designed to manage doctor-patient queues i
 > 🔐 **Patient login is currently optional** for simplicity.
 
 ### 1. Select a Doctor
-- Patients see a list of available doctors with their:
+- Patients see a list of available doctors with:
   - Name
   - Clinic image
   - Qualifications
+
+### 2. Join the Queue
+- Patients can enter:
+  - Name
+  - Contact number (optional)
+- A **Token Number / Queue Number** is **immediately generated**.
+- The token will be:
+  - **Slightly opaque or blurred**
+  - On **hover or click**, a tooltip/message appears:
+    > ⏳ *"Waiting for assistant/doctor to verify your request..."*
+- This creates a sense of progress while reminding patients that verification is pending.
+
+### 3. Verification by Clinic Assistant
+- The assistant or doctor verifies and accepts the patient.
+- Once verified, the token becomes fully visible and moves to the **active queue**.
+
+### 4. View Queue Status
+- Patients can now see:
+  - Number of patients ahead
+  - Estimated wait time (future feature)
+  - A real-time status update if implemented
+
 
 ### 2. Join the Queue
 - Patients can enter:
